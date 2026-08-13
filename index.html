@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#050505" />
+    <meta
+      name="description"
+      content="PCBoo is a Bun-first framework for building circuit boards with coding agents, composable TypeScript, and reviewable evidence."
+    />
+    <meta property="og:title" content="PCBoo — Build circuits with your coding agent" />
+    <meta
+      property="og:description"
+      content="Circuits as composable TypeScript. Deterministic builds, inspection, simulation, checks, and manufacturing evidence in one local workflow."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pcboo-dev.github.io/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="PCBoo — Build circuits with your coding agent" />
+    <meta name="twitter:description" content="Circuits as composable TypeScript with deterministic, reviewable evidence." />
+    <title>PCBoo — Build circuits with your coding agent</title>
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="PCBoo home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>PCBoo</span>
+      </a>
+      <nav class="desktop-nav" aria-label="Main navigation">
+        <a href="#workflow">Workflow</a>
+        <a href="#evidence">Evidence</a>
+        <a href="#open-source">Open source</a>
+      </nav>
+      <a class="header-cta" href="https://github.com/pcboo-dev/pcboo">View on GitHub <span aria-hidden="true">↗</span></a>
+      <button class="menu-button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
+    </header>
+
+    <div class="mobile-menu" aria-hidden="true">
+      <a href="#workflow">Workflow</a>
+      <a href="#evidence">Evidence</a>
+      <a href="#open-source">Open source</a>
+      <a href="https://github.com/pcboo-dev/pcboo">View on GitHub ↗</a>
+    </div>
+
+    <main id="main">
+      <section class="hero" id="top">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="status-dot"></span>Open source · Agent-native EDA</div>
+          <h1>Build circuits<br />with your<br /><em>coding agent.</em></h1>
+          <p>
+            PCBoo turns a project folder into a complete circuit workspace. Compose boards in TypeScript, ask your existing agent to edit them, and inspect every result in the browser.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="https://github.com/pcboo-dev/pcboo">Explore the repository <span>↗</span></a>
+            <a class="button button-ghost" href="#workflow">See how it works <span>↓</span></a>
+          </div>
+          <div class="availability"><span>01</span><strong>Initial release target</strong><span>Apple Silicon macOS</span></div>
+        </div>
+
+        <div class="board-stage reveal" aria-label="Animated technical illustration of a PCBoo circuit board">
+          <div class="stage-label top-left">PCB-01 / POWER INDICATOR</div>
+          <div class="stage-label top-right"><b></b> LIVE MODEL</div>
+          <svg id="board-visual" viewBox="0 0 650 520" role="img" aria-labelledby="board-title board-desc">
+            <title id="board-title">PCBoo power indicator board</title>
+            <desc id="board-desc">A technical four-layer circuit board drawing with connectors, control chips, traces, vias, and a scanning validation line.</desc>
+            <defs>
+              <pattern id="pcb-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+                <path d="M20 0H0V20" fill="none" stroke="#22d67a" stroke-opacity=".13" stroke-width="1" />
+              </pattern>
+              <linearGradient id="scan-glow" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="#22d67a" stop-opacity="0" />
+                <stop offset=".5" stop-color="#22d67a" stop-opacity=".18" />
+                <stop offset="1" stop-color="#22d67a" stop-opacity="0" />
+              </linearGradient>
+              <filter id="board-glow" x="-30%" y="-30%" width="160%" height="160%">
+                <feGaussianBlur stdDeviation="12" result="blur" />
+                <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
+              </filter>
+            </defs>
+            <g class="pcb-tilt">
+              <rect class="pcb-halo" x="45" y="50" width="540" height="390" rx="18" />
+              <rect class="pcb-body" x="45" y="50" width="540" height="390" rx="18" />
+              <rect x="52" y="57" width="526" height="376" rx="13" fill="url(#pcb-grid)" />
+
+              <g class="mounts">
+                <g transform="translate(75 80)"><circle r="9"/><circle r="3"/></g>
+                <g transform="translate(555 80)"><circle r="9"/><circle r="3"/></g>
+                <g transform="translate(75 410)"><circle r="9"/><circle r="3"/></g>
+                <g transform="translate(555 410)"><circle r="9"/><circle r="3"/></g>
+              </g>
+
+              <g class="traces trace-amber">
+                <path d="M165 174H202V193H237" /><path d="M165 188H190V273H237" />
+                <path d="M379 196H407V150H423" /><path d="M379 244H469V313" />
+                <path d="M307 290V359H411" /><path d="M142 314H202V244H237" />
+                <path d="M515 150H537V343H513" />
+              </g>
+              <g class="traces trace-cyan">
+                <path d="M165 202H214V225H237" /><path d="M379 267H434V334H411" />
+                <path d="M111 357H152V314" /><path d="M379 216H405V176H423" />
+              </g>
+
+              <g class="vias">
+                <circle cx="202" cy="193" r="4"/><circle cx="190" cy="273" r="4"/>
+                <circle cx="407" cy="196" r="4"/><circle cx="469" cy="244" r="4"/>
+                <circle cx="307" cy="359" r="4"/><circle cx="202" cy="244" r="4"/>
+                <circle cx="537" cy="343" r="4"/><circle cx="434" cy="334" r="4"/>
+                <circle cx="152" cy="314" r="4"/><circle cx="405" cy="176" r="4"/>
+              </g>
+
+              <g class="chip connector" transform="translate(92 150)">
+                <rect width="73" height="54" rx="5"/><text x="12" y="19">J1</text>
+                <path d="M-7 14H0M-7 27H0M-7 40H0M73 14H80M73 27H80M73 40H80" />
+              </g>
+              <g class="chip controller" transform="translate(237 174)">
+                <rect width="142" height="116" rx="5"/><text x="13" y="21">U1 / CTRL</text>
+                <path d="M-7 15H0M-7 29H0M-7 43H0M-7 57H0M-7 71H0M-7 85H0M-7 99H0M142 15H149M142 29H149M142 43H149M142 57H149M142 71H149M142 85H149M142 99H149" />
+                <circle cx="72" cy="62" r="3" />
+              </g>
+              <g class="chip power" transform="translate(423 123)">
+                <rect width="92" height="54" rx="5"/><text x="11" y="19">PWR</text>
+                <path d="M-7 14H0M-7 27H0M-7 40H0M92 14H99M92 27H99M92 40H99" />
+              </g>
+              <g class="chip io" transform="translate(411 313)">
+                <rect width="102" height="62" rx="5"/><text x="11" y="19">IO</text>
+                <path d="M-7 15H0M-7 31H0M-7 47H0M102 15H109M102 31H109M102 47H109" />
+              </g>
+
+              <g class="pcb-points">
+                <circle cx="101" cy="102" r="2"/><circle cx="132" cy="354" r="2"/><circle cx="214" cy="110" r="2"/>
+                <circle cx="446" cy="90" r="2"/><circle cx="493" cy="225" r="2"/><circle cx="360" cy="385" r="2"/>
+                <circle cx="533" cy="282" r="2"/><circle cx="218" cy="362" r="2"/><circle cx="392" cy="138" r="2"/>
+              </g>
+              <g class="scan-line"><rect x="48" y="75" width="534" height="64" fill="url(#scan-glow)"/><path d="M50 107H580"/></g>
+            </g>
+          </svg>
+          <div class="telemetry">
+            <div><span>BUILD</span><b>DETERMINISTIC</b></div>
+            <div><span>BOARD</span><b>2–4 LAYER</b></div>
+            <div><span>ENGINE</span><b>TSCIRCUIT</b></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="manifesto section-pad">
+        <div class="section-number">01 / THE IDEA</div>
+        <div class="manifesto-copy reveal">
+          <p class="kicker">The repository is the interface.</p>
+          <h2>Hardware deserves the same composable, inspectable workflow as software.</h2>
+          <div class="manifesto-body">
+            <p>PCBoo is not another visual editor and not another agent runtime. It gives coding agents a precise filesystem contract, deterministic commands, and compact results they can reason about.</p>
+            <p>Humans stay in the loop through a local inspection server—and can hand off to KiCad when fine manual adjustment is the right tool.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="workflow section-pad" id="workflow">
+        <div class="section-heading reveal">
+          <div>
+            <span class="section-number">02 / WORKFLOW</span>
+            <h2>From prompt to<br /><em>production evidence.</em></h2>
+          </div>
+          <p>One project. Normal files. A small set of commands that agents can run, inspect, and repair without a proprietary UI.</p>
+        </div>
+
+        <div class="workflow-grid">
+          <article class="workflow-card reveal">
+            <div class="card-index">01</div>
+            <div class="terminal-dots"><i></i><i></i><i></i></div>
+            <div class="file-tree" aria-label="Example PCBoo project structure">
+              <div><span>▾</span> my-board/</div>
+              <div class="indent"><span>▾</span> circuit/</div>
+              <div class="indent-2 active"><span>TS</span> board.ts</div>
+              <div class="indent-2"><span>TS</span> power.ts</div>
+              <div class="indent"><span>◇</span> tests/</div>
+              <div class="indent"><span>⚙</span> pcboo.config.ts</div>
+              <div class="indent"><span>⌗</span> pcboo.lock</div>
+            </div>
+            <div class="card-copy"><span>COMPOSE</span><h3>Circuits are normal TypeScript.</h3><p>Split the board into small, named components. Import and combine them just like application code.</p></div>
+          </article>
+
+          <article class="workflow-card reveal">
+            <div class="card-index">02</div>
+            <pre class="code-block"><code><span class="dim">import</span> { Board, Circuit } <span class="dim">from</span> <span class="amber">"pcboo"</span>;
+<span class="dim">import</span> { addPower } <span class="dim">from</span> <span class="amber">"./power"</span>;
+
+<span class="violet">export default</span> <span class="dim">function</span> createCircuit() {
+  <span class="violet">const</span> circuit = <span class="violet">new</span> Circuit();
+  <span class="violet">const</span> board = <span class="violet">new</span> Board({
+    width: <span class="amber">"30mm"</span>, height: <span class="amber">"20mm"</span>,
+    layers: <span class="cyan">4</span>
+  });
+  addPower(board);
+  circuit.add(board);
+  <span class="violet">return</span> circuit;
+}</code></pre>
+            <div class="card-copy"><span>AUTHOR</span><h3>Your agent edits the source.</h3><p>Use Codex, Claude Code, Cursor, or any filesystem-capable coding agent. No special chat surface required.</p></div>
+          </article>
+
+          <article class="workflow-card reveal">
+            <div class="card-index">03</div>
+            <div class="command-stack">
+              <div><span>$</span> bun run pcboo build <b>✓</b></div>
+              <div><span>$</span> bun run pcboo check <b>✓</b></div>
+              <div><span>$</span> bun run pcboo dev <b class="pulse">●</b></div>
+            </div>
+            <svg class="mini-board" viewBox="0 0 190 130" aria-hidden="true">
+              <rect x="1" y="1" width="188" height="128" rx="3"/>
+              <rect x="20" y="20" width="150" height="90"/><rect class="mini-chip" x="58" y="42" width="74" height="46"/>
+              <path d="M20 36H58M132 55H170M95 88V110M36 20V62H58"/>
+              <circle cx="10" cy="10" r="4"/><circle cx="180" cy="10" r="4"/><circle cx="10" cy="120" r="4"/><circle cx="180" cy="120" r="4"/>
+              <circle cx="58" cy="36" r="3"/><circle cx="132" cy="55" r="3"/><circle cx="95" cy="88" r="3"/>
+            </svg>
+            <div class="card-copy"><span>VERIFY</span><h3>Build, test, inspect, repeat.</h3><p>Get concise diagnostics for the agent and visual board, schematic, layer, and measurement views for the human.</p></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="evidence section-pad" id="evidence">
+        <div class="evidence-copy reveal">
+          <span class="section-number">03 / EVIDENCE, NOT PROMISES</span>
+          <h2>Every status<br />stays <em>honest.</em></h2>
+          <p>PCBoo keeps independent validation dimensions separate. A manufacturable layout never silently implies a passing simulation, available parts, or standards compliance.</p>
+          <ul>
+            <li><span>01</span> Deterministic repeat builds</li>
+            <li><span>02</span> Versioned, machine-readable reports</li>
+            <li><span>03</span> Draft artifacts cannot masquerade as verified</li>
+            <li><span>04</span> No telemetry or project upload by default</li>
+          </ul>
+        </div>
+        <div class="status-console reveal">
+          <div class="console-head"><span>RUN / 7F3A9C</span><span>BOARD REVISION A</span></div>
+          <div class="status-row"><span>Fabrication</span><div class="meter"><i style="--w: 100%"></i></div><b class="pass">PASSED</b></div>
+          <div class="status-row"><span>Electrical</span><div class="meter"><i style="--w: 100%"></i></div><b class="pass">PASSED</b></div>
+          <div class="status-row"><span>Functional</span><div class="meter"><i style="--w: 62%"></i></div><b class="warn">INCOMPLETE</b></div>
+          <div class="status-row"><span>Standards</span><div class="meter"><i style="--w: 34%"></i></div><b class="warn">PROFILE ONLY</b></div>
+          <div class="status-row"><span>Sourcing</span><div class="meter"><i style="--w: 12%"></i></div><b class="muted">UNAVAILABLE</b></div>
+          <div class="console-note"><span>!</span><p>Passing one dimension never changes another. Unavailable work remains visible in reports and manifests.</p></div>
+        </div>
+      </section>
+
+      <section class="capabilities section-pad">
+        <div class="section-number">04 / SYSTEM SURFACE</div>
+        <div class="capability-grid">
+          <div class="capability-title reveal"><h2>Small interface.<br /><em>Deep verification.</em></h2></div>
+          <article class="capability reveal"><span>BUILD</span><h3>Deterministic compilation</h3><p>Compile twice, normalize Circuit JSON, and detect ordinary nondeterminism or undeclared inputs.</p><b>01 ↗</b></article>
+          <article class="capability reveal"><span>INSPECT</span><h3>Local visual workspace</h3><p>Pan, zoom, filter layers, select geometry, measure, and trigger bounded derived actions from loopback.</p><b>02 ↗</b></article>
+          <article class="capability reveal"><span>SIMULATE</span><h3>Qualified ngspice runs</h3><p>Named testbenches, explicit models, bounded solver execution, and independent numeric assertions.</p><b>03 ↗</b></article>
+          <article class="capability reveal"><span>EXPORT</span><h3>KiCad handoff</h3><p>Create a detached, validated KiCad project for the moments when manual CAD adjustment is valuable.</p><b>04 ↗</b></article>
+          <article class="capability reveal"><span>MANUFACTURE</span><h3>Verified artifacts</h3><p>Generate and independently reconcile Gerber, drill, BOM, and placement evidence before promotion.</p><b>05 ↗</b></article>
+        </div>
+      </section>
+
+      <section class="open-source section-pad" id="open-source">
+        <div class="os-orbit reveal" aria-hidden="true">
+          <div class="orbit orbit-a"></div><div class="orbit orbit-b"></div><div class="orbit orbit-c"></div>
+          <div class="os-core"><span>MIT</span><b>OPEN<br />SOURCE</b></div>
+          <i class="node n1">TS</i><i class="node n2">PCB</i><i class="node n3">JSON</i><i class="node n4">SVG</i>
+        </div>
+        <div class="os-copy reveal">
+          <span class="section-number">05 / OPEN FOUNDATION</span>
+          <h2>Built in public.<br />Built on <em>tscircuit.</em></h2>
+          <p>PCBoo is an independent MIT-licensed project. It reuses tscircuit’s circuit authoring and compilation ecosystem while adding an agent-first project contract, verification boundaries, local inspection, and production-evidence workflow.</p>
+          <p class="fine-print">PCBoo is not an official tscircuit product and does not imply endorsement by or affiliation with tscircuit Inc. Third-party packages and assets retain their own licenses.</p>
+          <a class="text-link" href="https://github.com/pcboo-dev/pcboo">Read the source on GitHub <span>↗</span></a>
+        </div>
+      </section>
+
+      <section class="final-cta section-pad reveal">
+        <div class="cta-grid" aria-hidden="true"></div>
+        <span class="section-number">READY WHEN THE PACKAGES ARE</span>
+        <h2>Describe the board.<br /><em>Let the agent build.</em></h2>
+        <p>Follow development, inspect the architecture, and help shape an open circuit workflow made for coding agents.</p>
+        <a class="button button-primary" href="https://github.com/pcboo-dev/pcboo">Star PCBoo on GitHub <span>↗</span></a>
+      </section>
+    </main>
+
+    <footer>
+      <a class="brand" href="#top"><span class="brand-mark"><i></i><i></i><i></i></span><span>PCBoo</span></a>
+      <p>Build circuits with your coding agent.</p>
+      <div><a href="https://github.com/pcboo-dev/pcboo">GitHub ↗</a><a href="https://github.com/tscircuit/tscircuit">tscircuit ↗</a></div>
+      <span>MIT LICENSE · © 2026 PCBOO CONTRIBUTORS</span>
+    </footer>
+  </body>
+</html>
