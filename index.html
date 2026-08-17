@@ -62,87 +62,14 @@
           <div class="availability"><span>01</span><strong>Initial release target</strong><span>Apple Silicon macOS</span></div>
         </div>
 
-        <div class="board-stage reveal" aria-label="Animated technical illustration of a PCBoo circuit board">
-          <div class="stage-label top-left">PCB-01 / POWER INDICATOR</div>
-          <div class="stage-label top-right"><b></b> LIVE MODEL</div>
-          <svg id="board-visual" viewBox="0 0 650 520" role="img" aria-labelledby="board-title board-desc">
-            <title id="board-title">PCBoo power indicator board</title>
-            <desc id="board-desc">A technical four-layer circuit board drawing with connectors, control chips, traces, vias, and a scanning validation line.</desc>
-            <defs>
-              <pattern id="pcb-grid" width="20" height="20" patternUnits="userSpaceOnUse">
-                <path d="M20 0H0V20" fill="none" stroke="#4d8e70" stroke-opacity=".17" stroke-width="1" />
-              </pattern>
-              <linearGradient id="scan-glow" x1="0" y1="0" x2="0" y2="1">
-                <stop offset="0" stop-color="#199b61" stop-opacity="0" />
-                <stop offset=".5" stop-color="#199b61" stop-opacity=".18" />
-                <stop offset="1" stop-color="#199b61" stop-opacity="0" />
-              </linearGradient>
-              <filter id="board-glow" x="-30%" y="-30%" width="160%" height="160%">
-                <feGaussianBlur stdDeviation="12" result="blur" />
-                <feMerge><feMergeNode in="blur" /><feMergeNode in="SourceGraphic" /></feMerge>
-              </filter>
-            </defs>
-            <g class="pcb-tilt">
-              <rect class="pcb-halo" x="45" y="50" width="540" height="390" rx="18" />
-              <rect class="pcb-body" x="45" y="50" width="540" height="390" rx="18" />
-              <rect x="52" y="57" width="526" height="376" rx="13" fill="url(#pcb-grid)" />
-
-              <g class="mounts">
-                <g transform="translate(75 80)"><circle r="9"/><circle r="3"/></g>
-                <g transform="translate(555 80)"><circle r="9"/><circle r="3"/></g>
-                <g transform="translate(75 410)"><circle r="9"/><circle r="3"/></g>
-                <g transform="translate(555 410)"><circle r="9"/><circle r="3"/></g>
-              </g>
-
-              <g class="traces trace-amber">
-                <path d="M165 174H202V193H237" /><path d="M165 188H190V273H237" />
-                <path d="M379 196H407V150H423" /><path d="M379 244H469V313" />
-                <path d="M307 290V359H411" /><path d="M142 314H202V244H237" />
-                <path d="M515 150H537V343H513" />
-              </g>
-              <g class="traces trace-cyan">
-                <path d="M165 202H214V225H237" /><path d="M379 267H434V334H411" />
-                <path d="M111 357H152V314" /><path d="M379 216H405V176H423" />
-              </g>
-
-              <g class="vias">
-                <circle cx="202" cy="193" r="4"/><circle cx="190" cy="273" r="4"/>
-                <circle cx="407" cy="196" r="4"/><circle cx="469" cy="244" r="4"/>
-                <circle cx="307" cy="359" r="4"/><circle cx="202" cy="244" r="4"/>
-                <circle cx="537" cy="343" r="4"/><circle cx="434" cy="334" r="4"/>
-                <circle cx="152" cy="314" r="4"/><circle cx="405" cy="176" r="4"/>
-              </g>
-
-              <g class="chip connector" transform="translate(92 150)">
-                <rect width="73" height="54" rx="5"/><text x="12" y="19">J1</text>
-                <path d="M-7 14H0M-7 27H0M-7 40H0M73 14H80M73 27H80M73 40H80" />
-              </g>
-              <g class="chip controller" transform="translate(237 174)">
-                <rect width="142" height="116" rx="5"/><text x="13" y="21">U1 / CTRL</text>
-                <path d="M-7 15H0M-7 29H0M-7 43H0M-7 57H0M-7 71H0M-7 85H0M-7 99H0M142 15H149M142 29H149M142 43H149M142 57H149M142 71H149M142 85H149M142 99H149" />
-                <circle cx="72" cy="62" r="3" />
-              </g>
-              <g class="chip power" transform="translate(423 123)">
-                <rect width="92" height="54" rx="5"/><text x="11" y="19">PWR</text>
-                <path d="M-7 14H0M-7 27H0M-7 40H0M92 14H99M92 27H99M92 40H99" />
-              </g>
-              <g class="chip io" transform="translate(411 313)">
-                <rect width="102" height="62" rx="5"/><text x="11" y="19">IO</text>
-                <path d="M-7 15H0M-7 31H0M-7 47H0M102 15H109M102 31H109M102 47H109" />
-              </g>
-
-              <g class="pcb-points">
-                <circle cx="101" cy="102" r="2"/><circle cx="132" cy="354" r="2"/><circle cx="214" cy="110" r="2"/>
-                <circle cx="446" cy="90" r="2"/><circle cx="493" cy="225" r="2"/><circle cx="360" cy="385" r="2"/>
-                <circle cx="533" cy="282" r="2"/><circle cx="218" cy="362" r="2"/><circle cx="392" cy="138" r="2"/>
-              </g>
-              <g class="scan-line"><rect x="48" y="75" width="534" height="64" fill="url(#scan-glow)"/><path d="M50 107H580"/></g>
-            </g>
-          </svg>
-          <div class="telemetry">
-            <div><span>BUILD</span><b>DETERMINISTIC</b></div>
-            <div><span>BOARD</span><b>2–4 LAYER</b></div>
-            <div><span>ENGINE</span><b>TSCIRCUIT</b></div>
+        <div class="board-stage render-stage reveal" aria-label="Layered four-layer circuit board render">
+          <img class="render-image" src="/assets/pcboo-layered-board.webp" alt="Five illuminated slices revealing the physical layers of a detailed circuit board" />
+          <div class="render-head"><span>PCB-01 / FOUR-LAYER SYSTEM</span><b><i></i> BUILD PASSED</b></div>
+          <div class="render-index" aria-hidden="true"><span>01</span><span>02</span><span>03</span><span>04</span></div>
+          <div class="render-status">
+            <div><span>SOURCE</span><b>TypeScript</b></div>
+            <div><span>OUTPUT</span><b>4 layers</b></div>
+            <div><span>CHECKS</span><b><i></i> Verified</b></div>
           </div>
         </div>
       </section>
