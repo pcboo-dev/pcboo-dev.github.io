@@ -30,6 +30,7 @@
       </a>
       <nav class="desktop-nav" aria-label="Main navigation">
         <a href="#workflow">Workflow</a>
+        <a href="#skills">Skills</a>
         <a href="#evidence">Evidence</a>
         <a href="#open-source">Open source</a>
         <a href="https://docs.page/pcboo-dev/pcboo">Docs</a>
@@ -40,6 +41,7 @@
 
     <div class="mobile-menu" aria-hidden="true">
       <a href="#workflow">Workflow</a>
+      <a href="#skills">Skills</a>
       <a href="#evidence">Evidence</a>
       <a href="#open-source">Open source</a>
       <a href="https://docs.page/pcboo-dev/pcboo">Docs</a>
@@ -55,11 +57,14 @@
           <p>
             PCBoo turns a project folder into a complete circuit workspace. Compose boards in TypeScript, ask your existing agent to edit them, and inspect every result in the browser.
           </p>
+          <div class="hero-install" aria-label="Create a new PCBoo project">
+            <b>$</b><code>bun create pcboo my-board</code>
+          </div>
           <div class="hero-actions">
             <a class="button button-primary" href="https://github.com/pcboo-dev/pcboo">Explore the repository <span>↗</span></a>
             <a class="button button-ghost" href="#workflow">See how it works <span>↓</span></a>
           </div>
-          <div class="availability"><span>01</span><strong>Initial release target</strong><span>Apple Silicon macOS</span></div>
+          <div class="availability"><span>NPM</span><strong>Available now — v0.1.2</strong><span>Apple Silicon macOS</span></div>
         </div>
 
         <div class="board-stage render-stage reveal" aria-label="Layered four-layer circuit board render">
@@ -148,9 +153,30 @@
         </div>
       </section>
 
+      <section class="skills section-pad" id="skills">
+        <div class="section-heading reveal">
+          <div>
+            <span class="section-number">03 / AGENT SKILLS</span>
+            <h2>Skills that teach<br /><em>the procedure.</em></h2>
+          </div>
+          <p>Generated projects ship a versioned catalog of Agent Skills for Codex, Claude Code, Cursor, and compatible agents. Your agent learns the correct PCBoo procedure for each task — no guessing, no skipped gates.</p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal"><span>ROUTER</span><h3>pcboo-best-practices</h3><p>Orient in a project and route work to the right procedure without weakening evidence or human gates.</p></article>
+          <article class="skill-card reveal"><span>DESIGN</span><h3>pcboo-design</h3><p>Create complete circuits as composable TypeScript — architecture, footprints, stack-up, placement, routing.</p></article>
+          <article class="skill-card reveal"><span>LAYOUT</span><h3>pcboo-schematic-layout</h3><p>Make schematics readable with authored logical coordinates and machine-checkable collision gates.</p></article>
+          <article class="skill-card reveal"><span>MODELS</span><h3>pcboo-resolve-models</h3><p>Resolve, vendor, license-check, and bind realistic component 3D models before the assembled preview.</p></article>
+          <article class="skill-card reveal"><span>DIAGNOSE</span><h3>pcboo-diagnose</h3><p>Repair one build, electrical, fabrication, test, simulation, KiCad, or manufacturing finding at a time.</p></article>
+          <article class="skill-card reveal"><span>VERIFY</span><h3>pcboo-verify</h3><p>Prove requirements with tests, Circuit JSON checks, qualified simulations, and independent evidence review.</p></article>
+          <article class="skill-card reveal"><span>MANUFACTURE</span><h3>pcboo-manufacturing</h3><p>Generate and independently verify Gerber, drill, BOM, and placement artifacts and KiCad handoffs.</p></article>
+          <article class="skill-card skill-card-cta reveal"><span>ADD TO ANY PROJECT</span><h3>skills add pcboo</h3><p>Install the public catalog into an existing project. Copy mode keeps PCBoo's no-symlink boundary intact.</p><code>bunx --bun skills@latest add pcboo-dev/pcboo --copy</code></article>
+        </div>
+      </section>
+
       <section class="evidence section-pad" id="evidence">
         <div class="evidence-copy reveal">
-          <span class="section-number">03 / EVIDENCE, NOT PROMISES</span>
+          <span class="section-number">04 / EVIDENCE, NOT PROMISES</span>
           <h2>Every status<br />stays <em>honest.</em></h2>
           <p>PCBoo keeps independent validation dimensions separate. A manufacturable layout never silently implies a passing simulation, available parts, or standards compliance.</p>
           <ul>
@@ -172,14 +198,15 @@
       </section>
 
       <section class="capabilities section-pad">
-        <div class="section-number">04 / SYSTEM SURFACE</div>
+        <div class="section-number">05 / SYSTEM SURFACE</div>
         <div class="capability-grid">
           <div class="capability-title reveal"><h2>Small interface.<br /><em>Deep verification.</em></h2></div>
           <article class="capability reveal"><span>BUILD</span><h3>Deterministic compilation</h3><p>Compile twice, normalize Circuit JSON, and detect ordinary nondeterminism or undeclared inputs.</p><b>01 ↗</b></article>
-          <article class="capability reveal"><span>INSPECT</span><h3>Local visual workspace</h3><p>Pan, zoom, filter layers, select geometry, measure, and trigger bounded derived actions from loopback.</p><b>02 ↗</b></article>
+          <article class="capability reveal"><span>INSPECT</span><h3>React inspection workspace</h3><p>Schematic, PCB, and layer views, measurement, a locally rendered 3D assembly, and a Circuit JSON explorer.</p><b>02 ↗</b></article>
           <article class="capability reveal"><span>SIMULATE</span><h3>Qualified ngspice runs</h3><p>Named testbenches, explicit models, bounded solver execution, and independent numeric assertions.</p><b>03 ↗</b></article>
-          <article class="capability reveal"><span>EXPORT</span><h3>KiCad handoff</h3><p>Create a detached, validated KiCad project for the moments when manual CAD adjustment is valuable.</p><b>04 ↗</b></article>
-          <article class="capability reveal"><span>MANUFACTURE</span><h3>Verified artifacts</h3><p>Generate and independently reconcile Gerber, drill, BOM, and placement evidence before promotion.</p><b>05 ↗</b></article>
+          <article class="capability reveal"><span>ROUTE</span><h3>Freerouting autoroute</h3><p>Run a digest-pinned Freerouting JAR offline, then promote reviewed session routes back into source.</p><b>04 ↗</b></article>
+          <article class="capability reveal"><span>EXPORT</span><h3>KiCad handoff</h3><p>Create a detached, validated KiCad project for the moments when manual CAD adjustment is valuable.</p><b>05 ↗</b></article>
+          <article class="capability reveal"><span>MANUFACTURE</span><h3>Verified artifacts</h3><p>Generate and independently reconcile Gerber, drill, BOM, and placement evidence before promotion.</p><b>06 ↗</b></article>
         </div>
       </section>
 
@@ -190,7 +217,7 @@
           <i class="node n1">TS</i><i class="node n2">PCB</i><i class="node n3">JSON</i><i class="node n4">SVG</i>
         </div>
         <div class="os-copy reveal">
-          <span class="section-number">05 / OPEN FOUNDATION</span>
+          <span class="section-number">06 / OPEN FOUNDATION</span>
           <h2>Built in public.<br />Built on <em>tscircuit.</em></h2>
           <p>PCBoo is an independent MIT-licensed project. It reuses tscircuit’s circuit authoring and compilation ecosystem while adding an agent-first project contract, verification boundaries, local inspection, and production-evidence workflow.</p>
           <p class="fine-print">PCBoo is not an official tscircuit product and does not imply endorsement by or affiliation with tscircuit Inc. Third-party packages and assets retain their own licenses.</p>
@@ -200,10 +227,14 @@
 
       <section class="final-cta section-pad reveal">
         <div class="cta-grid" aria-hidden="true"></div>
-        <span class="section-number">READY WHEN THE PACKAGES ARE</span>
+        <span class="section-number">AVAILABLE NOW ON NPM</span>
         <h2>Describe the board.<br /><em>Let the agent build.</em></h2>
-        <p>Follow development, inspect the architecture, and help shape an open circuit workflow made for coding agents.</p>
-        <a class="button button-primary" href="https://github.com/pcboo-dev/pcboo">Star PCBoo on GitHub <span>↗</span></a>
+        <p>Scaffold a project in one command, point your coding agent at it, and inspect every result locally.</p>
+        <div class="hero-install cta-install" aria-label="Create a new PCBoo project"><b>$</b><code>bun create pcboo my-board</code></div>
+        <div class="hero-actions cta-actions">
+          <a class="button button-primary" href="https://github.com/pcboo-dev/pcboo">Star PCBoo on GitHub <span>↗</span></a>
+          <a class="button button-ghost" href="https://www.npmjs.com/package/@pcboo/pcboo">View on npm <span>↗</span></a>
+        </div>
       </section>
     </main>
 
